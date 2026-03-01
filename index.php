@@ -74,7 +74,7 @@ if (empty($_POST["message"])) {
 }
 
       if ($isValid) {
-      $_SESSION['form_submitted'] = true;
+      $_SESSION['submitted'] = true;
       header(header: 'Location:envoie.php');
 			exit;
 

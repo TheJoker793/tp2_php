@@ -2,12 +2,12 @@
 session_start();
 
 
-if (empty($_SESSION['form_submitted'])) {
+if (!isset($_SESSION['submitted'])) {
     header('Location: index.php');
     exit;
 }
 
-unset($_SESSION['form_submitted']);
+unset($_SESSION['submitted']);
 ?>
 
 <!DOCTYPE html>
