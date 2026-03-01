@@ -1,4 +1,14 @@
+<?php
+session_start();
 
+if (empty($_SESSION['form_submitted'])) {
+    header('Location: index.php');
+    exit;
+}
+
+// Détruire le jeton après usage (évite le rechargement de page)
+unset($_SESSION['form_submitted']);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,10 +19,12 @@
     <title>Envoie</title>
 </head>
 <body>
-    
+    <div class="container">
     <div class="alert alert-success" role="alert">
         Votre message a été envoyé avec succes :)
 </div>
+        
+    </div>
 
 
 

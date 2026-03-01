@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +57,7 @@ $isValid=true;
         $email=test_input($_POST['email']);
 					if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 					$emailErr = "Format adresse mail invalide";
-					$valid=false;
+					$isValid=false;
 									
         }
 
@@ -70,6 +73,7 @@ if (empty($_POST["message"])) {
 }
 
       if ($isValid) {
+      $_SESSION['form_submitted'] = true;
       header(header: 'Location:envoie.php');
 			exit;
 
