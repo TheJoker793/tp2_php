@@ -75,6 +75,10 @@ if (empty($_POST["message"])) {
 
       if ($isValid) {
       $_SESSION['submitted'] = true;
+      $_SESSION['nom'] = $nom;
+      $_SESSION['email'] = $email;
+      $_SESSION['tel'] = $telephonne;
+      $_SESSION['message'] = $message;
       header(header: 'Location:envoie.php');
 			exit;
 

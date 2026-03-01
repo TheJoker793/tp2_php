@@ -23,6 +23,15 @@ unset($_SESSION['submitted']);
     <div class="alert alert-success" role="alert">
         Votre message a été envoyé avec succes :)
 </div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Nom: <?= $_SESSION['nom'] ?></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Email: <?= $_SESSION['email'] ?></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Téléphonne: <?= $_SESSION['tel'] ?></h6>
+        <p class="card-text">Message: <?= $_SESSION['message'] ?></p>
+</div>
+
         
     </div>
 
