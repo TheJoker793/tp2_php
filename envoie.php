@@ -1,12 +1,12 @@
 <?php
 session_start();
 
+
 if (empty($_SESSION['form_submitted'])) {
     header('Location: index.php');
     exit;
 }
 
-// Détruire le jeton après usage (évite le rechargement de page)
 unset($_SESSION['form_submitted']);
 ?>
 
